@@ -1,35 +1,19 @@
-# Laravel Framework 5.1  Bootstrap 3 Starter Site
-
-Demo site is deleteed today> It's because some user upload virus code which is stop work server, which I use to hosting, and I need do delete it. Host owner tell me that I have some virus code on my start site(someone is upload some virus code on server) and I need to delete it or they delete it. So I must delete it. Sorry.
-
-## Starter Site based on on Laravel 5.1 and Boostrap 3
-* [Features](#feature1)
-* [Requirements](#feature2)
-* [How to install](#feature3)
-* [Application Structure](#feature4)
-* [Troubleshooting](#feature5)
-* [License](#feature6)
-* [Additional information](#feature7)
-* [How Starter site is look like](#feature8)
-* [Advanced Alternatives](#feature9)
-
+# A skeleton shopping cart pipeline project modified upon company's logic.
+A LAMP stack project with laravel framework.
 <a name="feature1"></a>
-## Starter Site Features:
+## Features:
 * Laravel 5.1.x
 * Twitter Bootstrap 3.x
 * Back-end
 	* Automatic install and setup website.
 	* User management.
-	* Manage languages.
-	* Manage photos and photo albums.
-	* Manage article and article categories.
-    * DataTables dynamic table sorting and filtering.
-    * Colorbox jQuery modal popup.
-    * Add Summernote WYSIWYG in textareas.
+	* Session management.
+	* Shopping cart management.
+	* Coupon code validation.
 * Front-end
-	* User login, registration
-	* View Photos,Articles, Languages and Users
-	* soon will be more...
+	* User login, registration.
+	* View products, own shopping cart, shopping history.
+    * bootstrap modal popup and.
 * Packages included:
 	* Datatables Bundle
 
@@ -41,7 +25,7 @@ Demo site is deleteed today> It's because some user upload virus code which is s
 	OpenSSL PHP Extension
 	Mbstring PHP Extension
 	Tokenizer PHP Extension
-	SQL server(for example MySQL)
+	MySQL
 	Composer
 	Node JS
 
@@ -58,20 +42,11 @@ Demo site is deleteed today> It's because some user upload virus code which is s
 <a name="step1"></a>
 ### Step 1: Get the code - Download the repository
 
-    https://github.com/mrakodol/Laravel-5-Bootstrap-3-Starter-Site/archive/master.zip
-
-Extract it in www(or htdocs if you using XAMPP) folder and put it for example in laravel5startersite folder.
+    git clone git@github.com:hao1987/winterfell.git
 
 -----
 <a name="step2"></a>
 ### Step 2: Use Composer to install dependencies
-
-Laravel utilizes [Composer](http://getcomposer.org/) to manage its dependencies. First, download a copy of the composer.phar.
-Once you have the PHAR archive, you can either keep it in your local project directory or move to
-usr/local/bin to use it globally on your system.
-On Windows, you can use the Composer [Windows installer](https://getcomposer.org/Composer-Setup.exe).
-
-Then run:
 
     composer install
 to install dependencies Laravel and other packages.
@@ -80,19 +55,11 @@ to install dependencies Laravel and other packages.
 <a name="step3"></a>
 ### Step 3: Create database
 
-If you finished first three steps, now you can create database on your database server(MySQL). You must create database
-with utf-8 collation(uft8_general_ci), to install and application work perfectly.
-After that, copy .env.example and rename it as .env and put connection and change default database connection name, only database connection, put name database, database username and password.
+Create database e.g.'winterfell' with utf-8 collation(uft8_general_ci), after that, copy .env.example and rename it as .env and put connection and change default database connection name, only database connection, put name database, database username and password.
 
 -----
 <a name="step4"></a>
 ### Step 4: Install
-
-Firstable need to uncomment this line "extension=php_fileinfo.dll" in php.ini file.
-
-This project makes use of Bower and Laravel Elixir. Before triggering Elixir, you must first ensure that Node.js (included in homestead) is installed on your machine.
-
-    node -v
 
 Install dependencies listed in package.json with:
 
@@ -110,22 +77,21 @@ And to initial populate database use this:
 
     php artisan db:seed
 
-If you install on your localhost in folder laravel5startersite, you can type on web browser:
+You can visit the site:
 
-	http://localhost/laravel5startersite/public
+	http://localhost/
 -----
 <a name="step5"></a>
-### Step 5: Start Page
+### Step 5: Shopping
 
-You can now login to admin part of Laravel Framework 5  Bootstrap 3 Starter Site:
-
-    username: admin@admin.com
-    password: admin
-OR user
+You can now login:
 
     username: user@user.com
     password: user
 
+Avaliable Coupon Code:
+
+    blackfriday25
 -----
 <a name="feature5"></a>
 ## Troubleshooting
@@ -143,12 +109,6 @@ OR
 
 -----
 <a name="feature6"></a>
-## License
-
-This is free software distributed under the terms of the MIT license
-
------
-<a name="feature7"></a>
 ## Additional information
 
 Inspired by and based on [andrew13's Laravel-4-Bootstrap-Starter-Site](https://github.com/andrew13/Laravel-4-Bootstrap-Starter-Site)
@@ -165,10 +125,3 @@ Inspired by and based on [andrew13's Laravel-4-Bootstrap-Starter-Site](https://g
 ![Admin list users](http://i58.tinypic.com/2ujl5dh.jpg)
 
 ----
-<a name="feature9"></a>
-## Advanced alternatives
-If you are interested in advanced starter sites where you can get 70+ admin pages, 20+ frontend pages with color schemes and a CRUD generator then visit below links
-
-[Josh](http://goo.gl/Mnhunr)
-
-[Chandra](http://goo.gl/hk4ut3)
