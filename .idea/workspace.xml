@@ -2,11 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9fc8f906-e43a-4cc4-8174-337f660ba362" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/database/seeds/ArticleCategoriesTableSeeder.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/database/seeds/ArticleTableSeeder.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/migrations/2014_10_18_225005_create_article_categories_table.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/migrations/2014_10_18_225505_create_articles_table.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/migrations/2014_10_18_225928_create_photo_albums_table.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/migrations/2014_10_18_231619_create_photos_table.php" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Coupon.php" afterPath="$PROJECT_DIR$/app/Coupon.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Product.php" afterPath="$PROJECT_DIR$/app/Product.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" afterPath="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" />
     </list>
     <ignored path="winterfell.iws" />
@@ -32,8 +32,18 @@
       <file leaf-file-name="UserTableSeeder.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/database/seeds/UserTableSeeder.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-15.625">
-              <caret line="25" column="35" selection-start-line="25" selection-start-column="35" selection-end-line="25" selection-end-column="50" />
+            <state vertical-scroll-proportion="-19.375">
+              <caret line="31" column="0" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name=".env" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.env">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.20519836">
+              <caret line="10" column="17" selection-start-line="10" selection-start-column="17" selection-end-line="10" selection-end-column="17" />
               <folding />
             </state>
           </provider>
@@ -83,10 +93,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CouponTableSeeder.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="CouponTableSeeder.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/database/seeds/CouponTableSeeder.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.7058824">
+            <state vertical-scroll-proportion="-9.411765">
               <caret line="32" column="0" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
               <folding />
             </state>
@@ -105,16 +115,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="autoload_classmap.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/vendor/composer/autoload_classmap.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-329.375">
-              <caret line="527" column="49" selection-start-line="527" selection-start-column="49" selection-end-line="527" selection-end-column="49" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="ProductTableSeeder.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/database/seeds/ProductTableSeeder.php">
           <provider selected="true" editor-type-id="text-editor">
@@ -129,7 +129,7 @@
         <entry file="file://$PROJECT_DIR$/database/seeds/DatabaseSeeder.php">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="-12.5">
-              <caret line="21" column="0" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
+              <caret line="21" column="46" selection-start-line="21" selection-start-column="46" selection-end-line="21" selection-end-column="46" />
               <folding />
             </state>
           </provider>
@@ -187,12 +187,12 @@
         <option value="$PROJECT_DIR$/database/migrations/2016_01_03_210838_create_shopping_carts_table.php" />
         <option value="$PROJECT_DIR$/database/migrations/2016_01_03_210855_create_shopping_cart_items_table.php" />
         <option value="$PROJECT_DIR$/database/seeds/ProductTableSeeder.php" />
-        <option value="$PROJECT_DIR$/.env" />
-        <option value="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" />
         <option value="$PROJECT_DIR$/vendor/composer/autoload_classmap.php" />
         <option value="$PROJECT_DIR$/app/Coupon.php" />
         <option value="$PROJECT_DIR$/app/Product.php" />
         <option value="$PROJECT_DIR$/database/seeds/CouponTableSeeder.php" />
+        <option value="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" />
+        <option value="$PROJECT_DIR$/.env" />
       </list>
     </option>
   </component>
@@ -912,22 +912,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/database/migrations/2014_10_18_225005_create_article_categories_table.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/database/migrations/2014_10_18_225505_create_articles_table.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-20.625">
-          <caret line="34" column="0" selection-start-line="34" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/database/migrations/2016_01_03_204801_create_products_table.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-21.875">
@@ -968,34 +952,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/database/migrations/2014_10_18_231619_create_photos_table.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.65770864">
-          <caret line="32" column="34" selection-start-line="32" selection-start-column="34" selection-end-line="32" selection-end-column="34" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/config/database.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.427157">
           <caret line="106" column="61" selection-start-line="106" selection-start-column="61" selection-end-line="106" selection-end-column="61" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.env">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="12" column="17" selection-start-line="12" selection-start-column="17" selection-end-line="12" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/database/seeds/DatabaseSeeder.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-12.5">
-          <caret line="21" column="0" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -1023,14 +983,6 @@
           <folding>
             <element signature="e#23#59#0#PHP" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/database/seeds/UserTableSeeder.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-15.625">
-          <caret line="25" column="35" selection-start-line="25" selection-start-column="35" selection-end-line="25" selection-end-column="50" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1072,8 +1024,32 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/database/seeds/CouponTableSeeder.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7058824">
+        <state vertical-scroll-proportion="-9.411765">
           <caret line="32" column="0" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/seeds/DatabaseSeeder.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-12.5">
+          <caret line="21" column="46" selection-start-line="21" selection-start-column="46" selection-end-line="21" selection-end-column="46" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/seeds/UserTableSeeder.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-19.375">
+          <caret line="31" column="0" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.env">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.20519836">
+          <caret line="10" column="17" selection-start-line="10" selection-start-column="17" selection-end-line="10" selection-end-column="17" />
           <folding />
         </state>
       </provider>

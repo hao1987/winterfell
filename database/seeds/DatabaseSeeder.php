@@ -19,6 +19,8 @@ class DatabaseSeeder extends Seeder
         $this->command->info('Admin User created with username admin@admin.com and password admin');
         $this->command->info('Test User created with username user@user.com and password user');
 		$this->call(LanguageTableSeeder::class);
+        $this->call(CouponTableSeeder::class);
+        $this->call(ProductTableSeeder::class);
 
         Model::reguard();
     }
