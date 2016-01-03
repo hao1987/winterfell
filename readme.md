@@ -72,9 +72,13 @@ And to initial populate database use this:
 
     php artisan db:seed
 
+Start laravel built-in server:
+
+    php artisan serve
+
 You can visit the site:
 
-	http://localhost/
+	http://localhost:8000/
 -----
 <a name="step5"></a>
 ### Step 5: Shopping
