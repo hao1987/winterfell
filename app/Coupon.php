@@ -11,6 +11,8 @@ class Coupon extends Model
 
     public $incrementing = false;
     protected $visible = ['amount_off', 'percent_off'];
+    protected $fillable = array('id', 'code', 'type', 'description', 'percent_off', 'amount_off', 'expire_at', 'times_redeemed', 'created_at', 'updated_at');
+
 
 
     public function scopeOfCode($query, $code) {
