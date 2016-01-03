@@ -3,76 +3,102 @@
 @section('content')
 <div class="row">
     <div class="page-header">
-        <h2>Home Page</h2>
+        <h2>Store List</h2>
     </div></div>
 
-    @if(count($articles)>0)
+    @if(count($products)>0)
         <div class="row">
-            <h2>News</h2>
-            @foreach ($articles as $post)
+            @foreach ($products as $product)
                 <div class="col-md-6">
                     <div class="row">
                         <div class="col-md-8">
                             <h4>
-                                <strong><a href="{{URL::to('article/'.$post->slug.'')}}">{{
-                                        $post->title }}</a></strong>
+                                <strong><a href="{{URL::to('article/'.$product->slug.'')}}">{{
+                                        $product->name }}</a></strong>
                             </h4>
                         </div>
                     </div>
                     <div class="row">
                         <div class="col-md-2">
-                            <a href="{{URL::to('news/'.$post->slug.'')}}" class="thumbnail"><img
+                            <a href="{{URL::to('news/'.$product->slug.'')}}" class="thumbnail"><img
                                         src="http://placehold.it/260x180" alt=""></a>
                         </div>
                         <div class="col-md-10">
-                            <p>{!! $post->introduction !!}</p>
+                            <p>{!! $product->description !!}</p>
 
                             <p>
-                                <a class="btn btn-mini btn-default"
-                                   href="{{URL::to('news/'.$post->slug.'')}}">Read more</a>
+                                <a data-toggle="modal"
+                                   data-name="{{ $product->name }}"
+                                   data-description="{{ $product->description }}"
+                                   data-id="{{ $product->id }}"
+                                   data-price="{{ $product->unitPrice }}"
+                                   data-quantity="{{ $product->quantity }}"
+                                   title="Quick View" class="btn btn-info btn-default quick-view" href="#quickView">Quick View</a>
                             </p>
                         </div>
                     </div>
                     <div class="row">
                         <div class="col-md-12">
-                            <p></p>
-
                             <p>
-                                <span class="glyphicon glyphicon-user"></span> by <span
-                                        class="muted">{{ $post->author->name }}</span> | <span
-                                        class="glyphicon glyphicon-calendar"></span> {{ $post->created_at }}
+                                <span class="glyphicon glyphicon-usd"></span>
+                                <span class="muted">{{ $product->unitPrice }}</span> |
+                                <span class="muted">Only {{ $product->quantity }} Left</span>
                             </p>
                         </div>
                     </div>
                 </div>
             @endforeach
-        </div>
-    @endif
 
-    @if(count($photoAlbums)>0)
-        <div class="row">
-            <h2>Photos</h2>
-            @foreach($photoAlbums as $item)
-                <div class="col-sm-3">
-                    <div class="row">
-                        <a href="{{URL::to('photo/'.$item->id.'')}}"
-                           class="hover-effect">
-                            @if($item->album_image!="")
-                                <img class="col-sm-12"
-                                        src="{!! URL::to('appfiles/photoalbum/'.$item->folder_id.'/'.$item->album_image) !!}">
-                            @elseif($item->album_image_first!="")
-                                <img class="col-sm-12"
-                                     src="{!! URL::to('appfiles/photoalbum/'.$item->folder_id.'/'.$item->album_image_first) !!}">
-                            @else
-                                <img class="col-sm-12" src="{!! URL::to('appfiles/photoalbum/no_photo.png') !!}">
-                            @endif
-                        </a>
-                        <div class=" col-sm-12">{{$item->name}}</div>
+
+            <div class="modal fade" id="quickView" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                            <h4 class="modal-title" id="myModalLabel">Product Details</h4>
+                        </div>
+                        <div class="modal-body">
+                            <div class="row">
+                                <div class="col-md-6"><img src="http://placehold.it/200x180" alt=""></div>
+                                <div class="col-md-6">
+                                    <div class="row">
+                                        <div class="col-md-12 col-sm-12 col-xs-12">
+                                            <strong><label id="productName"></label></strong>
+                                        </div>
+                                        <div class="col-md-12 col-sm-12 col-xs-12">
+                                            <label id="productDescription"></label>
+                                        </div>
+                                    </div>
+                                    {!! Form::open(array('url' => URL::to('addtocart'), 'method' => 'get', 'class'=> 'form-horizontal', 'id' => 'addToCart')) !!}
+                                    <input type="hidden" name="product">
+                                    <div class="form-group">
+                                        <label class="col-sm-2 control-label">Unit Price</label>
+                                        <div class="col-sm-10">
+                                            <p class="form-control-static" id="productUnitPrice"></p>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="inputQty" class="col-sm-2 control-label">QTY</label>
+                                        <div class="col-sm-10">
+                                            {!! Form::selectRange('number', 1, 1, 1, ['class' => 'form-control', 'id' => 'inputQty']) !!}
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <div class="col-md-12">
+                                            <button type="submit" class="btn btn-primary" style="margin-right: 15px;">
+                                                ADD TO CART
+                                            </button>
+                                        </div>
+                                    </div>
+                                    {!! Form::close() !!}
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
-            @endforeach
+        </div>
         </div>
     @endif
-
 @endsection
-@stop

@@ -16,4 +16,11 @@ return [
     'failed' => 'These credentials do not match our records.',
     'throttle' => 'Too many login attempts. Please try again in :seconds seconds.',
 
+
+    /**
+     * related to coupon code validation status
+     */
+    'expired' => 'This coupon code is already expired.',
+    'invalid' => 'This coupon code is not valid.',
+    'onetime_only' => 'This one-time coupon code was already redeemed.'
 ];

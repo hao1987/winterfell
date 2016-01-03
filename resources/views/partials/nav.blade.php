@@ -8,26 +8,21 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="#">Laravel</a>
+            <a class="navbar-brand" href="/">Westros</a>
         </div>
 
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
                 <li class="{{ (Request::is('/') ? 'active' : '') }}">
-                    <a href="{{ URL::to('') }}"><i class="fa fa-home"></i> Home</a>
-                </li>
-                <li class="{{ (Request::is('articles') ? 'active' : '') }}">
-                    <a href="{{ URL::to('articles') }}">Articles</a>
+                    <a href="{{ URL::to('') }}"><i class="fa fa-home"></i> Store</a>
                 </li>
                 <li class="{{ (Request::is('about') ? 'active' : '') }}">
                     <a href="{{ URL::to('about') }}">About</a>
                 </li>
-                <li class="{{ (Request::is('contact') ? 'active' : '') }}">
-                    <a href="{{ URL::to('contact') }}">Contact</a>
-                </li>
             </ul>
 
             <ul class="nav navbar-nav navbar-right">
+                <li><a href="{{ URL::to('shoppingcart') }}"><i class="fa fa-shopping-cart"></i> My Cart <span class="badge" id="itemsCtr">{{ Session::get('itemsCtr', 0) }}</span></a></li>
                 @if (Auth::guest())
                     <li class="{{ (Request::is('auth/login') ? 'active' : '') }}"><a href="{{ URL::to('auth/login') }}"><i
                                     class="fa fa-sign-in"></i> Login</a></li>
@@ -40,11 +35,9 @@
                                     class="fa fa-caret-down"></i></a>
                         <ul class="dropdown-menu" role="menu">
                             @if(Auth::check())
-                                @if(Auth::user()->admin==1)
-                                    <li>
-                                        <a href="{{ URL::to('admin/dashboard') }}"><i class="fa fa-tachometer"></i> Admin Dashboard</a>
-                                    </li>
-                                @endif
+                                <li>
+                                    <a href="{{ URL::to('orderhistory') }}"><i class="fa fa-calendar"></i> Order History</a>
+                                </li>
                                 <li role="presentation" class="divider"></li>
                             @endif
                             <li>
