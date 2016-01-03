@@ -42,7 +42,7 @@ A LAMP stack project with laravel framework.
 -----
 <a name="step2"></a>
 ### Step 2: Use Composer to install dependencies
-
+    cd PATH/winterfell
     composer install
 to install dependencies Laravel and other packages.
 
