@@ -50,7 +50,7 @@ to install dependencies Laravel and other packages.
 <a name="step3"></a>
 ### Step 3: Create database
 
-Create database e.g.'winterfell' with utf-8 collation(uft8_general_ci), after that, copy .env.example and rename it as .env and put connection and change default database connection name, only database connection, put name database, database username, password and port number(optional).
+Create database e.g.'winterfell' with utf-8 collation(uft8_general_ci), after that, rename .env.example as .env and change to your own database credentials: e.g. database, username, password and port number(optional).
 
 -----
 <a name="step4"></a>
