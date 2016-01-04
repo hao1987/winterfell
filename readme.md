@@ -21,7 +21,7 @@ A LAMP stack project with laravel framework.
 <a name="feature2"></a>
 ##Requirements
 
-	PHP >= 5.5.9
+	PHP >= 5.5.x
 	OpenSSL PHP Extension
 	Mbstring PHP Extension
 	Tokenizer PHP Extension
@@ -37,7 +37,7 @@ A LAMP stack project with laravel framework.
 <a name="step1"></a>
 ### Step 1: Get the code - Clone from the repository
 
-    git clone git@github.com:hao1987/winterfell.git
+    git clone git@github.com:hao1987/winterfell.git winterfell
 
 -----
 <a name="step2"></a>
@@ -92,7 +92,21 @@ Avaliable Coupon Code:
 
     blackfriday25
 -----
+
 <a name="feature4"></a>
+## Troubleshooting
+
+RuntimeException : No supported encrypter found. The cipher and / or key length are invalid.
+
+    php artisan key:generate
+
+PDOException : SQLSTATE[HY000] [2002] No such file or directory
+
+    set up MySQL port number in .env:
+    DB_HOST=localhost:PORT
+-----
+
+<a name="feature5"></a>
 ## Additional information
 
 Inspired by and based on [Laravel-4-Bootstrap-Starter-Site](https://github.com/andrew13/Laravel-4-Bootstrap-Starter-Site)
