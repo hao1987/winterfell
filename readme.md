@@ -1,9 +1,9 @@
 # A skeleton shopping cart pipeline project modified upon company's logic.
 A LAMP stack project with laravel framework.
-Model: app/x.php
-Controller: app/Http/Controllers/x
-View: resources/views/x
-js/css: public/x
+* Model: app/x.php
+* Controller: app/Http/Controllers/x
+* View: resources/views/x
+* js/css: public/x
 <a name="feature1"></a>
 ## Features:
 * Laravel 5.1.x
