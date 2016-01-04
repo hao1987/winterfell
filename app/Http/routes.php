@@ -13,7 +13,7 @@ Route::get('about', 'PagesController@about');
 
 Route::group(['middleware' => 'auth'], function() {
     Route::get('shoppingcart', ['as' => 'shoppingcart', 'uses' => 'shoppingcartcontroller@index']);
-    Route::get('addtocart', 'ShoppingCartItemController@add');
+    Route::post('addtocart', 'ShoppingCartItemController@add');
     Route::get('removefromcart', 'ShoppingCartItemController@remove');
     Route::get('applycoupon', 'CouponController@apply');
     Route::get('placeorder', 'TransactionController@placeOrder');

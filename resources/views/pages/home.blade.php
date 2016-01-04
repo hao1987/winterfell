@@ -69,7 +69,7 @@
                                             <label id="productDescription"></label>
                                         </div>
                                     </div>
-                                    {!! Form::open(array('url' => URL::to('addtocart'), 'method' => 'get', 'class'=> 'form-horizontal', 'id' => 'addToCart')) !!}
+                                    {!! Form::open(array('url' => URL::to('addtocart'), 'method' => 'post', 'class'=> 'form-horizontal', 'id' => 'addToCart')) !!}
                                     <input type="hidden" name="product">
                                     <div class="form-group">
                                         <label class="col-sm-2 control-label">Unit Price</label>

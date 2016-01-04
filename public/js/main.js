@@ -28,14 +28,15 @@ $(function() {
             product = $form.find( "input[name='product']" ).val(),
             quantity = $( "select#inputQty option:selected").val(),
             unitPrice = $("#productUnitPrice").text().substr(1),
-            url = $form.attr( "action" );
+            url = $form.attr( "action"),
+            token = $('meta[name="csrf-token"]').attr('content');
 
-        var get = $.get(url, {product: product, quantity: quantity, unitPrice: unitPrice});
+        var post = $.post(url, {product: product, quantity: quantity, unitPrice: unitPrice, _token:token});
 
-        get.done(function() {
+        post.done(function() {
             $("#quickView").modal('toggle');
             $("#itemsCtr").text(parseInt($("#itemsCtr").text()) + 1);
-        }).fail(function(data) {
+        }).fail(function() {
             window.location.href = "auth/login";
         });
     });
