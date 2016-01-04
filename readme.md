@@ -4,6 +4,7 @@ A LAMP stack project with laravel framework.
 * Controller: app/Http/Controllers/x
 * View: resources/views/x
 * js/css: public/x
+
 <a name="feature1"></a>
 ## Features:
 * Laravel 5.1.x
