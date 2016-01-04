@@ -14,9 +14,9 @@ Route::get('about', 'PagesController@about');
 Route::group(['middleware' => 'auth'], function() {
     Route::get('shoppingcart', ['as' => 'shoppingcart', 'uses' => 'shoppingcartcontroller@index']);
     Route::post('addtocart', 'ShoppingCartItemController@add');
-    Route::get('removefromcart', 'ShoppingCartItemController@remove');
-    Route::get('applycoupon', 'CouponController@apply');
-    Route::get('placeorder', 'TransactionController@placeOrder');
+    Route::post('removefromcart', 'ShoppingCartItemController@remove');
+    Route::post('applycoupon', 'CouponController@apply');
+    Route::post('placeorder', 'TransactionController@placeOrder');
     Route::get('orderhistory', 'TransactionController@history');
 
 });

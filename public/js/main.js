@@ -43,11 +43,12 @@ $(function() {
 
     $(document).on("click", ".remove-from-cart", function() {
         var remove = $(this),
-            id = $(this).data('id');
+            id = $(this).data('id'),
+            token = $('meta[name="csrf-token"]').attr('content');
 
-        var get = $.get('removefromcart', {shoppingCartItem: id});
+        var post = $.post('removefromcart', {shoppingCartItem: id, _token:token});
 
-        get.done(function() {
+        post.done(function() {
             $(remove).closest('div .row').remove();
             $("#itemsCtr").text(parseInt($("#itemsCtr").text()) - 1);
         });
@@ -60,11 +61,12 @@ $(function() {
             submitBtn = $($form).find("button[type='submit']"),
             code = $form.find("input[name='couponCode']").val(),
             beforeDiscount = $('#total').text(),
-            afterDiscount = beforeDiscount;
+            afterDiscount = beforeDiscount,
+            token = $('meta[name="csrf-token"]').attr('content');
 
         if(!$(submitBtn).hasClass('disabled')) {
-            var get = $.get('applycoupon', {coupon: code});
-            get.done(function (data) {
+            var post = $.post('applycoupon', {coupon: code, _token:token});
+            post.done(function (data) {
                 if (data.error) {
                     $($form).find('span.help-block').text(data.error).css('color', 'red');
                     code = '';
@@ -94,12 +96,13 @@ $(function() {
 
     $(document).on("click", "#placeOrder", function() {
 
-        var code = $('#placeOrder').data('coupon');
-        var realCharges = $('#placeOrder').data('realcharges');
-        var totalCharges = $('#placeOrder').data('totalcharges');
+        var code = $('#placeOrder').data('coupon'),
+            realCharges = $('#placeOrder').data('realcharges'),
+            totalCharges = $('#placeOrder').data('totalcharges'),
+            token = $('meta[name="csrf-token"]').attr('content');
 
-        var get = $.get('placeorder', {coupon: code, realCharges: realCharges, amountOff: Math.round((totalCharges - realCharges) * 100) / 100});
-        get.done(function (data) {
+        var post = $.post('placeorder', {coupon: code, realCharges: realCharges, amountOff: Math.round((totalCharges - realCharges) * 100) / 100, _token:token});
+        post.done(function (data) {
             window.location.href = "/";
         });
     });
